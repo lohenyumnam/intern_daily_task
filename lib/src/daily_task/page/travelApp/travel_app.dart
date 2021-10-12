@@ -8,7 +8,7 @@ class TravelApp extends StatelessWidget {
     return const Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          expandedHeight: 200,
+          expandedHeight: 300,
         ),
       ]),
     );
