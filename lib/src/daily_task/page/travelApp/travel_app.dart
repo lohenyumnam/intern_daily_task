@@ -21,6 +21,12 @@ class TravelApp extends StatelessWidget {
               child: Text('SM'),
             ),
           ],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(30),
+              bottomRight: Radius.circular(30),
+            ),
+          ),
         ),
       ]),
     );
