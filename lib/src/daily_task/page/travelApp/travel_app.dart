@@ -8,7 +8,9 @@ class TravelApp extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          title: const Text('Travel App'),
+          flexibleSpace: const FlexibleSpaceBar(
+            title: Text('Where would you like to go?'),
+          ),
           pinned: true,
           floating: true,
           snap: false,
@@ -64,7 +66,6 @@ class TravelApp extends StatelessWidget {
               height: 200,
               width: double.infinity,
               color: Colors.redAccent,
-              child: const Text('Container'),
             ),
           ]),
         )
