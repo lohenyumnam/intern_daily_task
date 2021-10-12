@@ -17,7 +17,7 @@ class TravelApp extends StatelessWidget {
           expandedHeight: 300,
           leading: IconButton(
               onPressed: () {
-                debugPrint('Back button pressed');
+                debugPrint('Menu button pressed');
               },
               icon: const Icon(Icons.menu)),
           actions: const [
