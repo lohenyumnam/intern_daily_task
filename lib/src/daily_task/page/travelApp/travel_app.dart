@@ -59,32 +59,20 @@ class TravelApp extends StatelessWidget {
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            const SizedBox(height: 20),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.redAccent,
-              child: const Text('Container'),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.redAccent,
-              child: const Text('Container'),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.redAccent,
-              child: const Text('Container'),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.redAccent,
+            Row(
+              children: [
+                InkWell(
+                    onTap: () {
+                      debugPrint('Tapped');
+                    },
+                    child: const Text("Popular")),
+                const SizedBox(width: 20),
+                InkWell(
+                    onTap: () {
+                      debugPrint('Tapped');
+                    },
+                    child: const Text("Recommended")),
+              ],
             ),
           ]),
         )
