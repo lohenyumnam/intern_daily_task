@@ -85,12 +85,18 @@ class TravelApp extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  width: 40,
-                  height: 4,
-                  decoration: const ShapeDecoration(
-                    shape: StadiumBorder(),
-                    color: Colors.orange,
+                AnimatedPositioned(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeInOut,
+                  left: 16,
+                  bottom: 4,
+                  child: Container(
+                    width: 40,
+                    height: 4,
+                    decoration: const ShapeDecoration(
+                      shape: StadiumBorder(),
+                      color: Colors.orange,
+                    ),
                   ),
                 )
               ],
