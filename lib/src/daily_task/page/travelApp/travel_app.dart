@@ -8,13 +8,11 @@ class TravelApp extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          flexibleSpace: const FlexibleSpaceBar(
-            title: Text('Where would you like to go?',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          ),
+          title: const Text('Travel App'),
           pinned: true,
+          floating: true,
+          snap: false,
           backgroundColor: Colors.orange,
-          expandedHeight: 300,
           leading: IconButton(
               onPressed: () {
                 debugPrint('Menu button pressed');
@@ -35,10 +33,39 @@ class TravelApp extends StatelessWidget {
               bottomRight: Radius.circular(30),
             ),
           ),
+          bottom: const PreferredSize(
+              preferredSize: Size.fromHeight(200), child: SizedBox()),
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            Container(),
+            const SizedBox(height: 20),
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.redAccent,
+              child: const Text('Container'),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.redAccent,
+              child: const Text('Container'),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.redAccent,
+              child: const Text('Container'),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.redAccent,
+              child: const Text('Container'),
+            ),
           ]),
         )
       ]),
