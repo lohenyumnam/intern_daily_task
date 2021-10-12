@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class TravelApp extends StatelessWidget {
@@ -59,19 +61,32 @@ class TravelApp extends StatelessWidget {
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            Row(
+            Stack(
               children: [
-                InkWell(
-                    onTap: () {
-                      debugPrint('Tapped');
-                    },
-                    child: const Text("Popular")),
-                const SizedBox(width: 20),
-                InkWell(
-                    onTap: () {
-                      debugPrint('Tapped');
-                    },
-                    child: const Text("Recommended")),
+                Container(
+                  margin: const EdgeInsets.all(12),
+                  child: Row(
+                    children: [
+                      InkWell(
+                          onTap: () {
+                            debugPrint('Popular');
+                          },
+                          child: const Text("Popular")),
+                      const SizedBox(width: 20),
+                      InkWell(
+                          onTap: () {
+                            debugPrint('Recommended');
+                          },
+                          child: const Text("Recommended")),
+                      const SizedBox(width: 20),
+                      InkWell(
+                          onTap: () {
+                            debugPrint('Cost-effect');
+                          },
+                          child: const Text("Cost-effect")),
+                    ],
+                  ),
+                ),
               ],
             ),
           ]),
