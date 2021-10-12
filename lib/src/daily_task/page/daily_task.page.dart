@@ -15,8 +15,8 @@ class DailyTaskPage extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-            title: const Text('Daily Task1'),
-            subtitle: const Text('Some text here'),
+            title: const Text('Task One'),
+            subtitle: const Text('SliverAppBar & Hero Animation'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               Navigator.push(context,
