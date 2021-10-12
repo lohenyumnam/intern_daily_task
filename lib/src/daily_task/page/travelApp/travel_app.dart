@@ -11,7 +11,9 @@ class TravelApp extends StatelessWidget {
           flexibleSpace: FlexibleSpaceBar(
             // title: Text('Where would you like to go?'),
             background: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(
+                left: 25,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
