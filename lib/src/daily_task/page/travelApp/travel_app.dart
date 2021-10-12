@@ -14,8 +14,8 @@ class TravelApp extends StatelessWidget {
           actions: [
             CircleAvatar(
               backgroundColor: Colors.brown,
-              child: Text('Santa'),
-            )
+              child: Text('SM'),
+            ),
           ],
         ),
       ]),
