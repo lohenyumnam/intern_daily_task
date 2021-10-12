@@ -36,6 +36,11 @@ class TravelApp extends StatelessWidget {
             ),
           ),
         ),
+        SliverList(
+          delegate: SliverChildListDelegate([
+            Container(),
+          ]),
+        )
       ]),
     );
   }
