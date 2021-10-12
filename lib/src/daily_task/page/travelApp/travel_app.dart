@@ -8,11 +8,27 @@ class TravelApp extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          flexibleSpace: const FlexibleSpaceBar(
-            title: Text('Where would you like to go?'),
+          flexibleSpace: FlexibleSpaceBar(
+            // title: Text('Where would you like to go?'),
+            background: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Where would you like to go?',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4
+                        ?.copyWith(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
           ),
           pinned: true,
-          floating: true,
+          floating: false,
           snap: false,
           backgroundColor: Colors.orange,
           leading: IconButton(
@@ -35,8 +51,11 @@ class TravelApp extends StatelessWidget {
               bottomRight: Radius.circular(30),
             ),
           ),
-          bottom: const PreferredSize(
-              preferredSize: Size.fromHeight(200), child: SizedBox()),
+          expandedHeight: 250,
+          // bottom: const PreferredSize(
+          //   preferredSize: Size.fromHeight(200),
+          //   child: SizedBox(),
+          // ),
         ),
         SliverList(
           delegate: SliverChildListDelegate([
