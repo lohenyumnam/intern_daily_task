@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class TravelApp extends StatelessWidget {
@@ -87,6 +85,14 @@ class TravelApp extends StatelessWidget {
                     ],
                   ),
                 ),
+                Container(
+                  width: 40,
+                  height: 4,
+                  decoration: const ShapeDecoration(
+                    shape: StadiumBorder(),
+                    color: Colors.orange,
+                  ),
+                )
               ],
             ),
           ]),
