@@ -17,9 +17,12 @@ class TravelApp extends StatelessWidget {
           expandedHeight: 300,
           leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
           actions: const [
-            CircleAvatar(
-              backgroundColor: Colors.brown,
-              child: Text('SM'),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CircleAvatar(
+                backgroundColor: Colors.grey,
+                child: Icon(Icons.person),
+              ),
             ),
           ],
           shape: const RoundedRectangleBorder(
