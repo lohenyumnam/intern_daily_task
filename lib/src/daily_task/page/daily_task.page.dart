@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:intern_daily_task/src/daily_task/page/travelApp/travel_app.dart';
 
 class DailyTaskPage extends StatelessWidget {
   const DailyTaskPage({Key? key}) : super(key: key);
@@ -18,7 +19,8 @@ class DailyTaskPage extends StatelessWidget {
             subtitle: const Text('Some text here'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-              log('Do something here');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const TravelApp()));
             },
           ),
           ListTile(
