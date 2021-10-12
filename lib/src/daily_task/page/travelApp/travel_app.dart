@@ -15,7 +15,11 @@ class TravelApp extends StatelessWidget {
           pinned: true,
           backgroundColor: Colors.orange,
           expandedHeight: 300,
-          leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+          leading: IconButton(
+              onPressed: () {
+                debugPrint('Back button pressed');
+              },
+              icon: const Icon(Icons.menu)),
           actions: const [
             Padding(
               padding: EdgeInsets.all(8.0),
