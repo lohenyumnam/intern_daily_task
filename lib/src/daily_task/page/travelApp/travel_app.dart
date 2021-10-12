@@ -5,23 +5,24 @@ class TravelApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          flexibleSpace: FlexibleSpaceBar(
-            title: Text('Where you want to go'),
+          flexibleSpace: const FlexibleSpaceBar(
+            title: Text('Where would you like to go?',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           ),
           pinned: true,
           backgroundColor: Colors.orange,
           expandedHeight: 300,
-          leading: Icon(Icons.menu),
-          actions: [
+          leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+          actions: const [
             CircleAvatar(
               backgroundColor: Colors.brown,
               child: Text('SM'),
             ),
           ],
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(30),
               bottomRight: Radius.circular(30),
