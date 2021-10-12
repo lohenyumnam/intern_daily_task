@@ -10,6 +10,13 @@ class TravelApp extends StatelessWidget {
         SliverAppBar(
           backgroundColor: Colors.orange,
           expandedHeight: 300,
+          leading: Icon(Icons.menu),
+          actions: [
+            CircleAvatar(
+              backgroundColor: Colors.brown,
+              child: Text('Santa'),
+            )
+          ],
         ),
       ]),
     );
