@@ -97,6 +97,19 @@ class _TravelAppState extends State<TravelApp> {
               ],
             ),
           ),
+          const TabBarView(
+            children: <Widget>[
+              Center(
+                child: Text("It's cloudy here"),
+              ),
+              Center(
+                child: Text("It's rainy here"),
+              ),
+              Center(
+                child: Text("It's sunny here"),
+              ),
+            ],
+          ),
         ],
       ),
     );
