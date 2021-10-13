@@ -72,13 +72,15 @@ class _TravelAppState extends State<TravelApp> {
             delegate: SliverChildListDelegate(
               [
                 const Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(20),
                   child: MyCustomTabs(),
                 ), //tabs
-                const MyCustomCard(), //cards
-                const MyCustomCard(), //cards
-                const MyCustomCard(), //cards
-                const MyCustomCard(), //cards
+                Row(
+                  children: const [
+                    MyCustomCard(),
+                  ],
+                ), //cards
+                //cards
               ],
             ),
           ),

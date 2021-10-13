@@ -6,9 +6,11 @@ class MyCustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 200,
+      margin: const EdgeInsets.all(10),
+      height: 500,
+      width: 350,
       color: Colors.red,
+      child: Image.asset('assets/images/865178.jpg', fit: BoxFit.cover),
     );
   }
 }
