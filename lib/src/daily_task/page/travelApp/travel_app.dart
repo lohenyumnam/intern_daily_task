@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Components/customcart.dart';
+import 'Components/customtabs.dart';
+
 class TravelApp extends StatefulWidget {
   const TravelApp({Key? key}) : super(key: key);
 
@@ -68,35 +71,13 @@ class _TravelAppState extends State<TravelApp> {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                DefaultTabController(
-                  initialIndex: 1,
-                  length: 3,
-                  child: Row(children: const [
-                    TabBar(tabs: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                        child: Tab(
-                          text: 'Popular',
-                        ),
-                      ),
-                    ])
-                  ]),
-                ),
+                const MyCustomTabs(),
+                const MyCustomCard(),
+                const MyCustomCard(),
+                const MyCustomCard(),
+                const MyCustomCard(),
               ],
             ),
-          ),
-          const TabBarView(
-            children: <Widget>[
-              Center(
-                child: Text("It's cloudy here"),
-              ),
-              Center(
-                child: Text("It's rainy here"),
-              ),
-              Center(
-                child: Text("It's sunny here"),
-              ),
-            ],
           ),
         ],
       ),
