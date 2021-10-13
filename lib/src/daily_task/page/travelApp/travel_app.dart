@@ -71,28 +71,16 @@ class _TravelAppState extends State<TravelApp> {
                 DefaultTabController(
                   initialIndex: 1,
                   length: 3,
-                  child: Row(
-                    children: const [
+                  child: Row(children: const [
+                    TabBar(tabs: [
                       Padding(
                         padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                         child: Tab(
                           text: 'Popular',
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                        child: Tab(
-                          text: 'Recommended',
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                        child: Tab(
-                          text: 'Cost-effect',
-                        ),
-                      ),
-                    ],
-                  ),
+                    ])
+                  ]),
                 ),
               ],
             ),
