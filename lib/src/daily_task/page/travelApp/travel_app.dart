@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TravelApp extends StatelessWidget {
+class TravelApp extends StatefulWidget {
   const TravelApp({Key? key}) : super(key: key);
 
+  @override
+  State<TravelApp> createState() => _TravelAppState();
+}
+
+class _TravelAppState extends State<TravelApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +21,7 @@ class TravelApp extends StatelessWidget {
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Where would you like to go?',
@@ -61,47 +66,42 @@ class TravelApp extends StatelessWidget {
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            Stack(
-              children: [
-                Container(
-                  margin: const EdgeInsets.all(12),
-                  child: Row(
-                    children: [
-                      InkWell(
-                          onTap: () {
-                            debugPrint('Popular');
-                          },
-                          child: const Text("Popular")),
-                      const SizedBox(width: 20),
-                      InkWell(
-                          onTap: () {
-                            debugPrint('Recommended');
-                          },
-                          child: const Text("Recommended")),
-                      const SizedBox(width: 20),
-                      InkWell(
-                          onTap: () {
-                            debugPrint('Cost-effect');
-                          },
-                          child: const Text("Cost-effect")),
-                    ],
-                  ),
-                ),
-                AnimatedPositioned(
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut,
-                  left: 16,
-                  bottom: 4,
-                  child: Container(
-                    width: 40,
-                    height: 4,
-                    decoration: const ShapeDecoration(
-                      shape: StadiumBorder(),
-                      color: Colors.orange,
+            DefaultTabController(
+              initialIndex: 1,
+              length: 3,
+              child: Container(
+                margin: const EdgeInsets.all(12),
+                child: Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        debugPrint('Popular');
+                      },
+                      child: const Tab(
+                        text: 'Popular',
+                      ),
                     ),
-                  ),
-                )
-              ],
+                    const SizedBox(width: 20),
+                    InkWell(
+                      onTap: () {
+                        debugPrint('Recommended');
+                      },
+                      child: const Tab(
+                        text: 'Recommended',
+                      ),
+                    ),
+                    const SizedBox(width: 20),
+                    InkWell(
+                      onTap: () {
+                        debugPrint('Cost-effect');
+                      },
+                      child: const Tab(
+                        text: 'Cost-effect',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ]),
         )
