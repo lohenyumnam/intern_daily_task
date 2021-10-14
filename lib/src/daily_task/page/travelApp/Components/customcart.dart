@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intern_daily_task/src/daily_task/page/golden_beach.dart';
 
 class MyCustomCard extends StatelessWidget {
   const MyCustomCard({Key? key}) : super(key: key);
@@ -7,7 +8,8 @@ class MyCustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        debugPrint('Card tapped.');
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const GoldenBeach()));
       },
       child: Stack(children: [
         Positioned(
