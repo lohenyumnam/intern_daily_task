@@ -25,14 +25,19 @@ class _TravelAppState extends State<TravelApp> {
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Where would you like to go?',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4
-                          ?.copyWith(color: Colors.white),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 40,
+                      ),
+                      child: Text(
+                        'Where would you like to go?',
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline4
+                            ?.copyWith(color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
