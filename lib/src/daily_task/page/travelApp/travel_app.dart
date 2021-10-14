@@ -81,9 +81,12 @@ class _TravelAppState extends State<TravelApp> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: const [
-                      MyCustomCard(
-                        imgurl:
-                            "https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?cs=srgb&dl=pexels-nathan-cowley-1151282.jpg&fm=jpg",
+                      Padding(
+                        padding: EdgeInsets.all(15),
+                        child: MyCustomCard(
+                          imgurl:
+                              "https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?cs=srgb&dl=pexels-nathan-cowley-1151282.jpg&fm=jpg",
+                        ),
                       ),
                     ],
                   ),

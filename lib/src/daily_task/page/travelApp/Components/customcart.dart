@@ -7,7 +7,7 @@ class MyCustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 500,
       width: 450,
       child: Stack(children: [
@@ -17,18 +17,28 @@ class MyCustomCard extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const GoldenBeach()));
           },
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
             child: Image.network(
               imgurl,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
             ),
           ),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
-            const Text("data")
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                Text("data"),
+              ],
+            ),
           ],
         )
       ]),
