@@ -5,6 +5,6 @@ class GoldenBeach extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset("assets/images/865178.jpg");
+    return Container();
   }
 }

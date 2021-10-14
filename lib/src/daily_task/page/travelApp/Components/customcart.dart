@@ -2,83 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:intern_daily_task/src/daily_task/page/golden_beach.dart';
 
 class MyCustomCard extends StatelessWidget {
-  const MyCustomCard({Key? key}) : super(key: key);
+  const MyCustomCard({Key? key, required this.imgurl}) : super(key: key);
+  final String imgurl;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const GoldenBeach()));
-      },
+    return Container(
+      height: 500,
+      width: 450,
       child: Stack(children: [
-        Positioned(
-          child: Hero(
-            tag: "865178",
-            child: Container(
-              margin: const EdgeInsets.all(10),
-              height: 500,
-              width: 350,
-              child: Image.asset(
-                "assets/images/865178.jpg",
-                fit: BoxFit.cover,
-              ),
-            ),
+        InkWell(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const GoldenBeach()));
+          },
+          child: Image.network(
+            imgurl,
+            fit: BoxFit.cover,
           ),
         ),
-        Positioned(
-          top: 15,
-          right: 15,
-          child: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-              color: Colors.yellow,
-              borderRadius: BorderRadius.circular(30),
-            ),
-          ),
-        ),
-        Positioned(
-          top: 20,
-          right: 20,
-          child: IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
-        ),
-        Positioned(
-          left: 30,
-          bottom: 100,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Golden Beach',
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
-              Row(
-                children: const [
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
+            const Text("data")
+          ],
+        )
       ]),
     );
   }
