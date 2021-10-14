@@ -8,15 +8,13 @@ class MyCustomCard extends StatelessWidget {
     return Stack(children: [
       Positioned(
         child: Container(
+          margin: const EdgeInsets.all(10),
+          height: 500,
+          width: 350,
           decoration: BoxDecoration(
-            color: const Color(0xff7c94b6),
             image: const DecorationImage(
               image: AssetImage('assets/images/865178.jpg'),
               fit: BoxFit.cover,
-            ),
-            border: Border.all(
-              color: Colors.black,
-              width: 8,
             ),
             borderRadius: BorderRadius.circular(12),
           ),
