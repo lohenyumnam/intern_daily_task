@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:intern_daily_task/src/daily_task/page/golden_beach.dart';
 
 class MyCustomCard extends StatelessWidget {
-  const MyCustomCard({Key? key, required this.imgUrl}) : super(key: key);
+  const MyCustomCard({Key? key, required this.imgUrl, required this.imgtitle})
+      : super(key: key);
   final String imgUrl;
+  final String imgtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +43,8 @@ class MyCustomCard extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Text("data"),
+                children: [
+                  Text(imgtitle),
                 ],
               ),
             ],
