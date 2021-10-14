@@ -7,9 +7,10 @@ class MyCustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 500,
       width: 450,
+      color: Colors.red,
       child: Stack(children: [
         InkWell(
           onTap: () {
@@ -20,7 +21,7 @@ class MyCustomCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: Image.network(
               imgurl,
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
             ),
           ),
         ),
