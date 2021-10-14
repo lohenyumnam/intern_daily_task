@@ -16,7 +16,7 @@ class MyCustomCard extends StatelessWidget {
               image: AssetImage('assets/images/865178.jpg'),
               fit: BoxFit.cover,
             ),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(20),
           ),
         ),
       ),
@@ -24,7 +24,12 @@ class MyCustomCard extends StatelessWidget {
         top: 15,
         right: 15,
         child: IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
-      )
+      ),
+      const Positioned(
+        left: 15,
+        bottom: 50,
+        child: Text('Card Title'),
+      ),
     ]);
   }
 }
