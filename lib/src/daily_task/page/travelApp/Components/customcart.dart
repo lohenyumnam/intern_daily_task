@@ -16,9 +16,12 @@ class MyCustomCard extends StatelessWidget {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const GoldenBeach()));
           },
-          child: Image.network(
-            imgurl,
-            fit: BoxFit.cover,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.network(
+              imgurl,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Column(
