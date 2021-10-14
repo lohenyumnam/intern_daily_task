@@ -88,6 +88,20 @@ class _TravelAppState extends State<TravelApp> {
                           padding: EdgeInsets.all(15),
                           child: MyCustomCard(
                             imgUrl:
+                                "https://images.pexels.com/photos/3293150/pexels-photo-3293150.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-3293150.jpg&fm=jpg",
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: MyCustomCard(
+                            imgUrl:
+                                "https://images.pexels.com/photos/3601426/pexels-photo-3601426.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-3601426.jpg&fm=jpg",
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: MyCustomCard(
+                            imgUrl:
                                 "https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?cs=srgb&dl=pexels-nathan-cowley-1151282.jpg&fm=jpg",
                           ),
                         ),
