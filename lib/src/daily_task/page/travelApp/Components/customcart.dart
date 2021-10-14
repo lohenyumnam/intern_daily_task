@@ -2,25 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:intern_daily_task/src/daily_task/page/golden_beach.dart';
 
 class MyCustomCard extends StatelessWidget {
-  const MyCustomCard({Key? key, required this.imgurl}) : super(key: key);
-  final String imgurl;
+  const MyCustomCard({Key? key, required this.imgUrl}) : super(key: key);
+  final String imgUrl;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 500,
-      width: 450,
-      color: Colors.red,
-      child: Stack(children: [
-        InkWell(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const GoldenBeach()));
-          },
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+    return Stack(
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const GoldenBeach()));
+            },
             child: Image.network(
-              imgurl,
+              imgUrl,
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +39,7 @@ class MyCustomCard extends StatelessWidget {
             ),
           ],
         )
-      ]),
+      ],
     );
   }
 }

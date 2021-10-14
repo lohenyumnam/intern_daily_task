@@ -79,16 +79,20 @@ class _TravelAppState extends State<TravelApp> {
                 const MyCustomTabs(), //tabs
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(15),
-                        child: MyCustomCard(
-                          imgurl:
-                              "https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?cs=srgb&dl=pexels-nathan-cowley-1151282.jpg&fm=jpg",
+                  child: SizedBox(
+                    height: 400,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: MyCustomCard(
+                            imgUrl:
+                                "https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?cs=srgb&dl=pexels-nathan-cowley-1151282.jpg&fm=jpg",
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ), //cards
                 //cards
