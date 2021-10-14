@@ -15,11 +15,11 @@ class MyCustomTabs extends StatelessWidget {
                 child: const Text('Popular'),
               ),
             ),
-            const Expanded(
-              child: Text('Recomended'),
+            Expanded(
+              child: InkWell(onTap: () {}, child: const Text('Recomended')),
             ),
-            const Expanded(
-              child: Text('Cost-effect'),
+            Expanded(
+              child: InkWell(onTap: () {}, child: const Text('Cost-effect')),
             ),
           ],
         ),
