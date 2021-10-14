@@ -23,6 +23,18 @@ class MyCustomCard extends StatelessWidget {
       Positioned(
         top: 15,
         right: 15,
+        child: Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+            color: Colors.yellow,
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
+      ),
+      Positioned(
+        top: 20,
+        right: 20,
         child: IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
       ),
       Positioned(
