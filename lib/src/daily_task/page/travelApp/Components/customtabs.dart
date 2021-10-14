@@ -8,14 +8,17 @@ class MyCustomTabs extends StatelessWidget {
     return Column(
       children: [
         Row(
-          children: const [
+          children: [
             Expanded(
-              child: Text('Popular'),
+              child: InkWell(
+                onTap: () {},
+                child: const Text('Popular'),
+              ),
             ),
-            Expanded(
+            const Expanded(
               child: Text('Recomended'),
             ),
-            Expanded(
+            const Expanded(
               child: Text('Cost-effect'),
             ),
           ],
