@@ -13,16 +13,19 @@ class MyCustomCard extends StatelessWidget {
       },
       child: Stack(children: [
         Positioned(
-          child: Container(
-            margin: const EdgeInsets.all(10),
-            height: 500,
-            width: 350,
-            decoration: BoxDecoration(
-              image: const DecorationImage(
-                image: AssetImage('assets/images/865178.jpg'),
-                fit: BoxFit.cover,
+          child: Hero(
+            tag: "Pic",
+            child: Container(
+              margin: const EdgeInsets.all(10),
+              height: 500,
+              width: 350,
+              decoration: BoxDecoration(
+                image: const DecorationImage(
+                  image: AssetImage('assets/images/865178.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(20),
               ),
-              borderRadius: BorderRadius.circular(20),
             ),
           ),
         ),
