@@ -83,6 +83,7 @@ class _TravelAppState extends State<TravelApp> {
                     children: const [
                       MyCustomCard(),
                       MyCustomCard(),
+                      MyCustomCard(),
                     ],
                   ),
                 ), //cards
