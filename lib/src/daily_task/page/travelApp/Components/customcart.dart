@@ -14,17 +14,14 @@ class MyCustomCard extends StatelessWidget {
       child: Stack(children: [
         Positioned(
           child: Hero(
-            tag: "Pic",
+            tag: "865178",
             child: Container(
               margin: const EdgeInsets.all(10),
               height: 500,
               width: 350,
-              decoration: BoxDecoration(
-                image: const DecorationImage(
-                  image: AssetImage('assets/images/865178.jpg'),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                "assets/images/865178.jpg",
+                fit: BoxFit.cover,
               ),
             ),
           ),
