@@ -84,6 +84,7 @@ class _TravelAppState extends State<TravelApp> {
                       MyCustomCard(),
                       MyCustomCard(),
                       MyCustomCard(),
+                      MyCustomCard(),
                     ],
                   ),
                 ), //cards
