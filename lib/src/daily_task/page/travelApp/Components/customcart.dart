@@ -25,10 +25,41 @@ class MyCustomCard extends StatelessWidget {
         right: 15,
         child: IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
       ),
-      const Positioned(
-        left: 15,
-        bottom: 50,
-        child: Text('Card Title'),
+      Positioned(
+        left: 30,
+        bottom: 100,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Golden Beach',
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+            Row(
+              children: const [
+                Icon(
+                  Icons.star,
+                  color: Colors.yellow,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.yellow,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.yellow,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.yellow,
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     ]);
   }
