@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'customcardholder.dart';
+import 'customcart.dart';
 
 class MyCustomTabs extends StatefulWidget {
   const MyCustomTabs({Key? key}) : super(key: key);
@@ -24,8 +26,8 @@ class _MyCustomTabsState extends State<MyCustomTabs> {
           length: 3,
           initialIndex: 0,
           child: Column(
-            children: const [
-              TabBar(
+            children: [
+              const TabBar(
                 labelColor: Colors.black,
                 indicatorColor: Colors.orange,
                 tabs: [
@@ -41,13 +43,9 @@ class _MyCustomTabsState extends State<MyCustomTabs> {
                 ],
               ),
               SizedBox(
-                height: 100,
+                height: 500,
                 child: TabBarView(
-                  children: [
-                    Text("data"),
-                    Text("data"),
-                    Text("data"),
-                  ],
+                  children: [const CardHolder(), Container(), Container()],
                 ),
               ),
             ],

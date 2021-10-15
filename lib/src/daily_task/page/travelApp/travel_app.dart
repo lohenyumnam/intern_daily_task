@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'Components/customcart.dart';
 import 'Components/customtabs.dart';
 
 class TravelApp extends StatefulWidget {
@@ -83,25 +81,7 @@ class _TravelAppState extends State<TravelApp> {
             delegate: SliverChildListDelegate(
               [
                 const MyCustomTabs(), //tabs
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: SizedBox(
-                    height: 400,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.all(15),
-                          child: MyCustomCard(
-                            imgtitle: "Night King Beach",
-                            imgUrl:
-                                "https://images.pexels.com/photos/3293150/pexels-photo-3293150.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-3293150.jpg&fm=jpg",
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ), //cards
+                //cards
                 //cards
               ],
             ),
