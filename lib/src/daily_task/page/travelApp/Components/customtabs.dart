@@ -10,29 +10,49 @@ class MyCustomTabs extends StatefulWidget {
 class _MyCustomTabsState extends State<MyCustomTabs> {
   final double sBox = 50.0;
 
+  final List<Tab> myTabs = const <Tab>[
+    Tab(text: 'Popular'),
+    Tab(text: 'Recommended'),
+    Tab(text: 'Recommended'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         DefaultTabController(
           length: 3,
           initialIndex: 0,
-          child: TabBar(
-              labelColor: Colors.black,
-              indicatorColor: Colors.orange,
-              tabs: [
-                Tab(
-                  text: 'Popular',
+          child: Column(
+            children: const [
+              TabBar(
+                labelColor: Colors.black,
+                indicatorColor: Colors.orange,
+                tabs: [
+                  Tab(
+                    text: 'Popular',
+                  ),
+                  Tab(
+                    text: 'Recommended',
+                  ),
+                  Tab(
+                    text: 'Cost-effect',
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 100,
+                child: TabBarView(
+                  children: [
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                  ],
                 ),
-                Tab(
-                  text: 'Recommended',
-                ),
-                Tab(
-                  text: 'Cost-effect',
-                )
-              ]),
+              ),
+            ],
+          ),
         ),
-        TabBarView(controller: null, children: [Text("data")])
       ],
     );
   }
