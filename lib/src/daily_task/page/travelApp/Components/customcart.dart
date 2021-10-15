@@ -24,9 +24,12 @@ class MyCustomCard extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const GoldenBeach()));
                 },
-                child: Image.network(
-                  imgUrl,
-                  fit: BoxFit.cover,
+                child: Hero(
+                  tag: "_pic",
+                  child: Image.network(
+                    imgUrl,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -41,10 +44,43 @@ class MyCustomCard extends StatelessWidget {
                       onPressed: () {}, icon: const Icon(Icons.favorite)),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+              Column(
                 children: [
-                  Text(imgtitle),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        imgtitle,
+                        style:
+                            const TextStyle(fontSize: 30, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.star_border,
+                          color: Colors.yellow,
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ],
