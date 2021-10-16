@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:intern_daily_task/src/daily_task/page/golden_beach.dart';
+
+import 'pages/page1.dart';
 
 class MyCustomCard extends StatelessWidget {
-  const MyCustomCard({Key? key, required this.imgUrl, required this.imgtitle})
-      : super(key: key);
-  final String imgUrl;
-  final String imgtitle;
+  const MyCustomCard({
+    Key? key,
+    required this.imgUrl,
+    required this.imgDis,
+    required this.imgName,
+  }) : super(key: key);
+  final String imgUrl, imgDis, imgName;
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +24,16 @@ class MyCustomCard extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const GoldenBeach()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Beach1(
+                        imgUrl: imgUrl,
+                      ),
+                    ),
+                  );
                 },
                 child: Hero(
-                  tag: "_pic",
+                  tag: imgUrl,
                   child: Image.network(
                     imgUrl,
                     fit: BoxFit.cover,
@@ -45,15 +53,17 @@ class MyCustomCard extends StatelessWidget {
                 ],
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        imgtitle,
+                        imgName,
                         style:
                             const TextStyle(fontSize: 30, color: Colors.white),
                       ),
+                      Text(imgDis)
                     ],
                   ),
                   Row(
@@ -80,7 +90,7 @@ class MyCustomCard extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ],

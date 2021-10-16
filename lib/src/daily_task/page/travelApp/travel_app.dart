@@ -32,12 +32,16 @@ class _TravelAppState extends State<TravelApp> {
                           .headline4
                           ?.copyWith(color: Colors.white),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Search',
-                          border: InputBorder.none,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                            borderSide: const BorderSide(
+                                width: 0, style: BorderStyle.none),
+                          ),
                           filled: true,
                           fillColor: Colors.white70,
                         ),
