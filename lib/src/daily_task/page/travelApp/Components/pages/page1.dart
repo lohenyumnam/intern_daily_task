@@ -13,9 +13,17 @@ class Beach1 extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Hero(
-            tag: imgUrl,
-            child: Image.network(imgUrl),
+          Container(
+            color: Colors.red,
+            height: 400,
+            width: 500,
+            child: Hero(
+              tag: imgUrl,
+              child: Image.network(
+                imgUrl,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
         ],
       ),
