@@ -1,6 +1,6 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:intern_daily_task/src/daily_task/page/form%20validations/user.dart';
 import 'package:intern_daily_task/src/daily_task/page/travelApp/travel_app.dart';
 
 class DailyTaskPage extends StatelessWidget {
@@ -24,11 +24,12 @@ class DailyTaskPage extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Daily Task1'),
-            subtitle: const Text('Some text here'),
+            title: const Text('Users'),
+            subtitle: const Text('Form Validation'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-              log('Do something here');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const UserForm()));
             },
           ),
           ListTile(
