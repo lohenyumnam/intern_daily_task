@@ -28,6 +28,8 @@ class MyCustomCard extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) => Beach1(
                         imgUrl: imgUrl,
+                        imgName: imgName,
+                        imgDis: imgDis,
                       ),
                     ),
                   );

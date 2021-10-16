@@ -4,9 +4,11 @@ class Beach1 extends StatelessWidget {
   const Beach1({
     Key? key,
     required this.imgUrl,
+    required this.imgName,
+    required this.imgDis,
   }) : super(key: key);
 
-  final String imgUrl;
+  final String imgUrl, imgName, imgDis;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,8 @@ class Beach1 extends StatelessWidget {
               ),
             ),
           ),
+          Text(imgName),
+          Text(imgDis)
         ],
       ),
     );

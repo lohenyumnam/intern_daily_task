@@ -18,9 +18,7 @@ class _TravelAppState extends State<TravelApp> {
             flexibleSpace: FlexibleSpaceBar(
               // title: Text('Where would you like to go?'),
               background: Padding(
-                padding: const EdgeInsets.only(
-                  left: 25,
-                ),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -32,19 +30,16 @@ class _TravelAppState extends State<TravelApp> {
                           .headline4
                           ?.copyWith(color: Colors.white),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Search',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25),
-                            borderSide: const BorderSide(
-                                width: 0, style: BorderStyle.none),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white70,
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                          borderSide: const BorderSide(
+                              width: 0, style: BorderStyle.none),
                         ),
+                        filled: true,
+                        fillColor: Colors.white70,
                       ),
                     ),
                   ],
@@ -84,7 +79,10 @@ class _TravelAppState extends State<TravelApp> {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                const MyCustomTabs(), //tabs
+                const MyCustomTabs(),
+                Container(
+                  height: 500,
+                ) //tabs
                 //cards
                 //cards
               ],
