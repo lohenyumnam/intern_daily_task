@@ -52,7 +52,7 @@ class _TravelAppState extends State<TravelApp> {
             backgroundColor: Colors.orange,
             leading: IconButton(
                 onPressed: () {
-                  debugPrint('Menu button pressed');
+                  debugPrint('Menu button pres');
                 },
                 icon: const Icon(Icons.menu)),
             actions: const [
