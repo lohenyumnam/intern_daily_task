@@ -89,6 +89,7 @@ class _UserFormState extends State<UserForm> {
                           Expanded(
                             flex: 8,
                             child: TextFormField(
+                              keyboardType: TextInputType.number,
                               controller: phonenumber,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
