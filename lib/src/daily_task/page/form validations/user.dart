@@ -105,6 +105,7 @@ class _UserFormState extends State<UserForm> {
                         ],
                       ),
                       TextFormField(
+                        keyboardType: TextInputType.emailAddress,
                         controller: email,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
